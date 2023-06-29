@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class KafkaEvents {
     private final Logger LOG = LoggerFactory.getLogger(KafkaEvents.class);
 
-    @Channel("quotation-channel")
+    @Channel("quotation")
     Emitter<QuotationDTO> quotationRequestEmitter;
     public void sendNewKafkaEvent(QuotationDTO quotation) {
         LOG.info("...Enviando cotação para tópico kafka");
